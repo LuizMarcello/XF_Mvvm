@@ -31,19 +31,9 @@ namespace XF_Mvvm.Model
                 Notificar();
             }
         }
-
-        private string email;
-
-        public string Email
-        {
-            get { return senha; }
-            set
-            {
-                email = value;
-                Notificar();
-            }
-        }
-
-
     }
 }
+
+        
+
+
