@@ -7,9 +7,12 @@ namespace XF_Mvvm
     {
         public App()
         {
-            //Registrando a interface(onde ela está) e sua implementação(a classe que implementou ela)
+            //Registrando as interfaces(onde elas estão) e suas implementações(as classes que implementam elas)
             //no serviço de dependência. Utilização do "dependency Service".
+
             DependencyService.Register<ViewModels.IMessageService, Views.MessageService>();
+
+            DependencyService.Register<ViewModels.INavigationService, Views.NavigationService>();
 
             InitializeComponent();
 

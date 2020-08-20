@@ -25,12 +25,17 @@ namespace XF_Mvvm.ViewModels
         }
 
         private readonly IMessageService _messageService;
+        private readonly INavigationService _navigationService;
 
         public LoginViewModel()
         {
             //_messageService vai receber uma instância da classe que implementou esta interface,
             //porque a interface está registrada no serviço de dependência
             _messageService = DependencyService.Get<IMessageService>();
+
+            //_navigationService vai receber uma instância da classe que implementou esta interface,
+            //porque a interface está registrada no serviço de dependência
+            _navigationService = DependencyService.Get<INavigationService>();
 
             LoginCommand = new Command(LoginCmd);
             RegistroCommand = new Command(RegistroCmd);
@@ -41,7 +46,7 @@ namespace XF_Mvvm.ViewModels
         {
             if (this.Nome == "macoratti" && this.Senha == "123")
             {
-                //Navega para menu
+                _navigationService.NavegarParaMenu();
             }
             else
             {
@@ -51,7 +56,7 @@ namespace XF_Mvvm.ViewModels
 
         private void RegistroCmd()
         {
-
+            this._navigationService.NavegarParaRegistro();
         }
 
         private void ResetarCmd()
@@ -61,5 +66,6 @@ namespace XF_Mvvm.ViewModels
         }
     }
 }
+
         
 
