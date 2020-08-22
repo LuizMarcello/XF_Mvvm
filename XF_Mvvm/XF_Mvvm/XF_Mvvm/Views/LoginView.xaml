@@ -2,9 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF_Mvvm.Views.LoginView"
+             xmlns:vm="clr-namespace:XF_Mvvm.ViewModels;assembly=XF_Mvvm"
              Title="Login">
 
     <StackLayout>
+        <!--Exemplo fazendo o "Binding Context" aqui no xaml
+            ao invés de fazer no codyng bihynd-->
+        <StackLayout.BindingContext>
+            <vm:LoginViewModel/>
+        </StackLayout.BindingContext>
+        
         <Entry Text="{Binding Nome}" Placeholder="Informe o nome" />
         <Entry Text="{Binding Senha}" Placeholder="Informe a senha" IsPassword="True" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -15,3 +22,5 @@
     </StackLayout>
 
 </ContentPage>
+   
+    

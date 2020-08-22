@@ -16,7 +16,7 @@ namespace XF_Mvvm.Views
         {
             InitializeComponent();
 
-            this.BindingContext = new LoginViewModel();
+            //this.BindingContext = new LoginViewModel();
         }
     }
 }

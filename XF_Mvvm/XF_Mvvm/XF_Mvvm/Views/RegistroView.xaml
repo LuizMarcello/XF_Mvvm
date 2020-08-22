@@ -9,9 +9,9 @@
         <Entry Text="{Binding Senha}" Placeholder="Informe a senha" IsPassword="True" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <Button Text="Login" Command="{Binding LoginCommand}" />
-            <Button Text="Registrar" Command="{Binding RegistroCommand}" />
             <Button Text="Resetar" Command="{Binding ResetarCommand}" />
         </StackLayout>
     </StackLayout>
     
 </ContentPage>
+            

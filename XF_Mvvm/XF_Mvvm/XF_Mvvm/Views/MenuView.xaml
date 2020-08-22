@@ -5,8 +5,8 @@
              Title="Menu">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Cadastro" Order="Primary" Priority="0" />
-        <ToolbarItem Name="Coleta" Order="Primary" Priority="1" />
-        <ToolbarItem Name="Impugnar" Order="Primary" Priority="2" />
+        <ToolbarItem Name="Cadastro" Order="Primary" Priority="0" Command="{Binding RegistroCommand}" />
+        <ToolbarItem Name="Serviços" Order="Primary" Priority="1" />
+        <ToolbarItem Name="Ajuda" Order="Primary" Priority="2" />
     </ContentPage.ToolbarItems>
 </ContentPage>
